@@ -15,8 +15,8 @@ import { Title } from '@angular/platform-browser';
 export class LoginpageComponent implements OnInit {
 
   
-  username:string;
-  password:string;
+  username:string = "user1";
+  password:string = "password1";
   hidePassword:boolean = true;
   slideToggle:boolean = false;
 
@@ -24,7 +24,7 @@ export class LoginpageComponent implements OnInit {
 
   ngOnInit(): void {
     this.setTitle("SnapGram - Login");
-    console.log(this.slideToggle);
+    this.loginUser()
   }
 
   toggleBox(status:boolean){

@@ -1,56 +1,124 @@
-<div class="upload-container">
-    <form>
-        <div class="preview-container">
-      </div>
-
-
-<form>
-   
-    <input #fileUpload type="file" id="photoUploadImage" name="files" (change)="onFileChange($event)" >
-
-    <img #chosenImage width="224" height="224" class="sample-image" />
- 
-  
-
-    Photo Name: <input id="photoName" type="text" name="photoName" (change)="onPhotoNameChange($event)" >
- 
-    Photo Description: <input id="photoDescription" type="text" name="photoDescription" (change)="onPhotoDescriptionChange($event)" >
-
-    <div id=createTags>
-      Tags :
-        <input id="addTag" [(ngModel)]='typedTagToSubmit' name="addTag" type="text" >
-        <button id="addTagButton"type="button" (click)="addLocalTag()">add Tag</button>
-
-    </div>
-    <button id="savePhotoButton"type="button" (click)="uploadPhoto()">Upload</button>
-</form>
-
-<ul>
-    <li *ngFor='let tag of tagsToUpload'>
-        <div id="tagHolder">
-            {{ tag.tagName }}
-            <span class="close" id="deleteTagSpan" (click)="deleteLocalTag(tag.tagName)">&times;</span>
-        </div>
-        <input #fileUpload type="file" id="photoUploadImage" name="files" (change)="onFileChange($event)" >
-        <img #chosenImage width="224" height="224" class="sample-image" />
-        Photo Name: <input id="photoName" type="text" name="photoName" (change)="onPhotoNameChange($event)" >
-        Photo Description: <input id="photoDescription" type="text" name="photoDescription" (change)="onPhotoDescriptionChange($event)" >
-        <div id=createTags>
-        Tags :
-            <input id="addTag" [(ngModel)]='typedTagToSubmit' name="addTag" type="text" >
-            <button id="addTagButton"type="button" (click)="addLocalTag()">add Tag</button>
-        </div>
-        <button id="savePhotoButton"type="button" (click)="uploadPhoto()">Upload</button>
-    </form>
-    <ul>
-        <li *ngFor='let tag of tagsToUpload'>
-            <div id=tagHolder>
-                {{ tag.tagName }}
-                <span class="close" (click)="deleteLocalTag(tag.tagName)">&times;</span>
+<div class="SettingsModal-settingsContainer-HQK">
+    <div class="SettingsModal-projectCoverColumn-1T8">
+        <div class="SettingsModal-columnWrap-1tp">
+           <div class="SettingsModal-coverEdit-3vP SettingsModal-inputField-3CK">
+               <div data-ut="edit-upload-image" class="SettingsModal-newImagePrompt-1ar SettingsModal-inputField-3CK">
+                   <button type="button" target="_self" class="SettingsModal" data-ut="launch-editor-button">
+                       <div class="Btn-labelWrapper-1jS"><!---->
+                            <div class="Btn-label-1Zf">Upload Image</div><!---->
+                       </div>
+                    </button>
+                <div class="SettingsModal-instructions-2Lj">
+                    <p class="SettingsModal-text-1ZW"> Minimum size of “808x632px” </p>
+                    <p class="SettingsModal-text-1ZW"> GIF files will not animate. </p>
+                </div></div><!----></div>
             </div>
-        </li>
-    </ul>
-</div>    
- 
+        </div>
+        <div class="SettingsModal-settingsColumn-2oN">
+            <div class="SettingsModal-columnWrap-1tp">
+                <div class="SettingsModal-row-1ab">
+                    <label class="SettingsModal-label-3hi"> Project Title <span class="SettingsModal-subLabel-1Pi">(required) </span>
+                    </label>
+                    <div class="TextInput-textInput-29G TextInput-textInputWithSpace-2so SettingsModal-inputField-3CK SettingsModal-projectTitleInput-2Y2 e2e-SettingsModal-title" data-ut="editor-settings-title" usetransitions="true">
+                        <label class="TextInput-label-1SN"> 
+                        <input type="text" placeholder="Give your project a title" maxlength="-1" autocomplete="off" class="TextInput-input-1ZG TextInput-unlabeled-1hM TextInput-inputWithSpace-33q TextInput-forProjectEditor-dsA qa-text-input e2e-TextInput-input">
+                        </label><!---->
+                    </div>
+                </div>
+                <div class="SettingsModal-row-1ab">
+                    <label class="SettingsModal-label-3hi"> Project Tags <span class="SettingsModal-subLabel-1Pi">(up to 10) </span><!---->
+                        <div class="TagsInput-autoSuggest-2zK SettingsModal-inputField-3CK" data-ut="editor-settings-tags">
+                            <div data-v-61d92e31="" class="vue-tags-input">
+                                <div data-v-61d92e31="" class="ti-input">
+                                    <ul data-v-61d92e31="" class="ti-tags"> 
+                                        <li data-v-61d92e31="" class="ti-new-tag-input-wrapper">
+                                            <input data-v-61d92e31="" placeholder="Add up to 10 keywords to help people discover your project" type="text" size="1" class="ti-new-tag-input min-length ti-invalid">
+                                        </li>
+                                    </ul>
+                                </div>  <!---->
+                            </div><!----><!---->
+                        </div>
+                    </label>
+                </div>
+                <div class="SettingsModal-row-1ab">
+                    <label class="SettingsModal-label-3hi"> Tools Used 
+                        <div class="Dropdown-dropdown-1PS">
+                            <div class="TagsInput-autoSuggest-2zK SettingsModal-inputField-3CK" data-ut="editor-settings-tools">
+                                <div data-v-61d92e31="" class="vue-tags-input">
+                                    <div data-v-61d92e31="" class="ti-input">
+                                        <ul data-v-61d92e31="" class="ti-tags"> 
+                                            <li data-v-61d92e31="" class="ti-new-tag-input-wrapper">
+                                                <input data-v-61d92e31="" placeholder="What software, hardware, or materials did you use?" type="text" size="1" class="ti-new-tag-input min-length ti-invalid">
+                                            </li>
+                                        </ul>
+                                    </div>  <!---->
+                                </div><!----><!---->
+                            </div>
+                            <div data-ut="dropdown-content-container" class="Dropdown-dropdownContent-D0U SettingsModal-dropdownContainer-oAN SettingsModal-noToolsFound-1m7" style="display: none;"><!---->
+                                <div><!---->
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+        </div>
+    </div>
+</div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="upload-container">
+    <form>
+        <div class="preview-column">
+            <div class="upload-column-wrap">
+                <div class="upload-input-field">
+                    <div class="upload-new-image-prompt">
+                        <input #fileUpload type="file" id="photoUploadImage" name="files" (change)="onFileChange($event)" >
+                        <img #chosenImage class="sample-image" /> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-column">
+            <div class="upload-column-wrap">
+                <div class="upload-input-field">
+                    Photo Name: <input id="photoName" type="text" name="photoName" (change)="onPhotoNameChange($event)" >
+                    Photo Description: <input id="photoDescription" type="text" name="photoDescription" (change)="onPhotoDescriptionChange($event)" >
+                    <div id=createTags>
+                    Tags :
+                        <input id="addTag" [(ngModel)]='typedTagToSubmit' name="addTag" type="text" >
+                        <button id="addTagButton"type="button" (click)="addLocalTag()">add Tag</button>
+                    </div>
+                    <button id="savePhotoButton"type="button" (click)="uploadPhoto()">Upload</button>
+                </div>
+            </div>
+        </div>
+            
+           
+    </form>
+        <ul>
+            <li *ngFor='let tag of tagsToUpload'>
+                <div id=tagHolder>
+                    {{ tag.tagName }}
+                    <span class="close" (click)="deleteLocalTag(tag.tagName)">&times;</span>
+                </div>
+            </li>
+        </ul>
+</div>     -->
+<!-- 
+width="224" height="224" -->

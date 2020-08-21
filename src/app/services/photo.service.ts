@@ -3,9 +3,11 @@ import { Photo } from '../models/photo';
 import {HttpClient} from '@angular/common/http';
 import { User } from '../models/user';
 import { UserService } from './user.service';
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class PhotoService {
 
   searchedUserId:number = this.userv.loggedInUser.userId;

@@ -1,0 +1,65 @@
+*{
+    box-sizing:border-box;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+
+
+
+
+.upload-container{
+    background-color: #fcfcfc;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    display: flex;
+    overflow-y: auto;
+}
+.upload-new-image-prompt{
+    border: 1px dashed #b7b7b7;
+    display: flex;
+    flex-wrap: wrap;
+    height: 240px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: 304px;
+    padding: 15px;
+}
+
+.preview-column{
+    display: flex;
+    width: 365px;
+    
+}
+.preview-column-wrap{
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 30px;
+}
+
+.info-column{
+    -webkit-box-flex: 1;
+    flex: 1;
+    
+}
+.upload-column-wrap{
+    -webkit-box-flex: 1;
+    flex: 1;
+    padding: 30px;
+}
+
+.upload-input-field{
+    font-size: 13px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+
+  /* 
+  #B2E8E8
+  #314D63
+  #8FB9AB
+  #F4D096
+  #F08976 
+*/
+
